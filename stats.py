@@ -23,3 +23,8 @@ def character_per_book(book):
             else:
                 character[word] = 1
     return character
+
+def words_sort(book):
+    character = character_per_book(book)
+    sorted_character = sorted(character.items(),reverse=True, key=lambda x:x[1])
+    return sorted_character
