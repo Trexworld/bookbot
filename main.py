@@ -1,7 +1,17 @@
+import sys
+sys.argv
+if len(sys.argv) <= 1:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+elif len(sys.argv) == 2:
+    book_path = "".join(sys.argv[1])
+else:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
 from stats import get_book_text, get_num_words, get_chars_dict, get_sorted_chars_list, alpha
 
 def main():
-    book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)
