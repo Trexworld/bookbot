@@ -1,8 +1,11 @@
-from stats import get_book_words, words_sort
+from stats import get_book_text, get_num_words, get_chars_dict
 
 def main():
-    print(f"""{get_book_words("books/frankenstein.txt")} words found in the document")
-{words_sort("books/frankenstein.txt")}
-""")
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = get_num_words(text)
+    chars_dict = get_chars_dict(text)
+    print(f"{num_words} words found in the document")
+    print(chars_dict)
 
 main()
